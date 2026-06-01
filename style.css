@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1e222b;
+}
+
+/* Calculator Container */
+.calculator {
+  background: #282c34;
+  padding: 20px;
+  border-radius: 15px;
+  width: 340px;
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.4),
+    0 0 15px rgba(97, 175, 239, 0.15);
+}
+
+/* Display Screen */
+#display {
+  width: 100%;
+  height: 70px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+
+  margin-bottom: 15px;
+  padding: 15px;
+
+  font-size: 28px;
+  text-align: right;
+
+  background: #282c34;
+  color: #ffffff;
+
+  box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.05);
+}
+
+/* Button Grid */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+/* Number Buttons */
+button {
+  border: none;
+  padding: 18px;
+
+  font-size: 18px;
+  font-weight: 500;
+
+  border-radius: 10px;
+  cursor: pointer;
+
+  background: #2c313c;
+  color: #abb2bf;
+
+  transition: all 0.25s ease;
+}
+
+/* Hover Effect */
+button:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.15);
+}
+
+/* Click Effect */
+button:active {
+  transform: scale(0.95);
+}
+
+/* Operator Buttons */
+.operator {
+  background: #61afef;
+  color: white;
+}
+
+.operator:hover {
+  background: #7c4dff;
+}
+
+/* Equals Button */
+.equal {
+  background: #00e676;
+  color: #1e222b;
+  font-weight: bold;
+}
+
+.equal:hover {
+  background: #00c853;
+}
+
+/* Zero Button */
+.zero {
+  grid-column: span 2;
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+  .calculator {
+    width: 95%;
+  }
+
+  button {
+    padding: 16px;
+    font-size: 16px;
+  }
+
+  #display {
+    font-size: 24px;
+  }
+}
